@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // picks the display elements from html
 const expressionDisplay = document.getElementById("expression");
 const resultDisplay = document.getElementById("result");
@@ -25,4 +26,22 @@ function calculate() {
         // show error message if expression is invalid
         resultDisplay.textContent = "Error";
     }
+=======
+const expressionDisplay = document.getElementById("expression");
+const resultDisplay = document.getElementById("result");
+function appendToDisplay(input) {
+    expressionDisplay.textContent += input;
+}
+function clearDisplay() {
+    expressionDisplay.textContent = "";
+    resultDisplay.textContent = "";
+}
+function calculate() {
+    try {
+        const result = eval(expressionDisplay.textContent);
+        resultDisplay.textContent = result;
+    } catch (error) {
+        resultDisplay.textContent = "Error";
+    }
+>>>>>>> 3f0d115f28b02ea11ad2d7381049b5ece001cd01
 }
